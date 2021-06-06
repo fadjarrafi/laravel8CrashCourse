@@ -14,8 +14,10 @@ use App\Http\Controllers\ProductsController;
 */
 //laravel 8 (new)
 Route::get('/products', [ProductsController::Class, 'index']);
-// Route::get('/products/about', [ProductsController::class, 'about']);
 
-// // Laravel 8 (also new)
-// Route::get('/products', 'App\Http\Controllers\ProductsController@index');
+Route::get('/products/{name}', [ProductsController::class, 'show']);
+
+// products = all products
+// /products/productsName
+// /products/productId
 

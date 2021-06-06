@@ -15,9 +15,18 @@ use App\Http\Controllers\ProductsController;
 //laravel 8 (new)
 Route::get('/products', [ProductsController::Class, 'index']);
 
-Route::get('/products/{name}', [ProductsController::class, 'show']);
+// Pattern is interger
+Route::get('/products/{id}', 
+    [ProductsController::class, 'show'])->where('id', '[0-9]+');
 
 // products = all products
 // /products/productsName
 // /products/productId
+
+// Pattern is istring
+Route::get('/products/{name}/{id}', 
+    [ProductsController::class, 'show'])->where([
+        'name' => '[a-z]+',
+        'id' => '[0-9]+'
+    ]);
 

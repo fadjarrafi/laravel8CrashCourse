@@ -8,25 +8,9 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        $title = 'welcome to my laravel 8';
-        $description = 'created by Fadjar';
-
-        $data = [
-            'productOne' => 'Xiaomi',
-            'productTwo' => 'Poco'
-        ];
-
-        // compact method
-        // return view('products.index', compact('title', 'description'));
-
-        // with method
-        // return view('products.index')->with('title', $title);
-        // return view('products.index')->with('data', $data);
-
+        print_r(route('products'));
         //Directly in the view
-        return view('products.index', [
-            'data' => $data
-        ]);
+        return view('products.index');
     }
 
     public function about()

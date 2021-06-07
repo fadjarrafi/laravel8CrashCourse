@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,18 +12,6 @@ use App\Http\Controllers\ProductsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//laravel 8 (new)
-Route::get('/products', [ProductsController::Class, 'index']);
 
-// Pattern is interger
-Route::get('/products/{id}', 
-    [ProductsController::class, 'show'])->where('id', '[0-9]+');
-
-// products = all products
-// /products/productsName
-// /products/productId
-
-// Pattern is istring
-Route::get('/products', 
-    [ProductsController::class, 'index'])->name('products');
-
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/abaout', [PagesController::class, 'about']);

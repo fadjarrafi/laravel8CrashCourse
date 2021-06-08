@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Personal Website - Code With Dary
+        Personal Website - Fadjar
     </title>
     <link 
         rel="stylesheet" 
@@ -17,12 +17,7 @@
         rel="stylesheet" 
         href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
-
-    <style>
-        .active {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>

@@ -1,18 +1,27 @@
 <!-- 
-    Comparing multiple possible conditions
-    Multiple values that may require the same code
+    foor loop
+    foreach loop
+    for else loop
+    whiel loop
 -->
 
-@switch($name)
-    @case('Fadjar')
-        <h2>Name is Fadjar!</h2>
-        @break
-    @case('Udin')
-        <h2>Name is Udin!</h2>
-        @break
-    @case('Michael')
-        <h2>Name is Michael!</h2>
-        @break
-    @default
-        <h2>No match found</h2>
-@endswitch
+@for ($i = 0; $i <= 10; $i++)
+    <h2>The number is {{ $i }}</h2>
+@endfor
+
+@foreach ($name as $item)
+    <h2>My name is {{ $item }}</h2>
+@endforeach
+
+@forelse ($name as $item)
+    <h2>The name is {{ $item }}</h2>
+@empty
+    <h2>There are no names</h2>
+@endforelse
+
+{{ $i = 0 }}
+
+@while ($i < 10)
+    <h2>{{ $i }}</h2>
+    {{ $i++ }}
+@endwhile

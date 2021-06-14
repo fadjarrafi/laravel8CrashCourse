@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\CarsController;
+// use App\Http\Controllers\PagesController;
+// use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +15,10 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PagesController::class, 'index']);
-Route::get('/about', [PagesController::class, 'about']);
+// Route::get('/', [PagesController::class, 'index']);
+// Route::get('/about', [PagesController::class, 'about']);
 
 // post endpoint
-Route::get('/posts', [PostController::class, 'index']);
+// Route::get('/posts', [PostController::class, 'index']);
+
+Route::resource('/cars', CarsController::class);
